@@ -20,3 +20,19 @@ class User(models.Model):
 
     class Meta:
         db_table = "User"
+
+class temp(models.Model):
+    temp=models.FloatField()
+    hum=models.FloatField()
+
+    class Meta:
+        db_table = "Weather_Description"
+
+class temp1(models.Model):
+    temp=models.FloatField()
+    hum=models.CharField()
+    place=models.CharField()
+
+    class Meta:
+        db_table = "Weather"
+

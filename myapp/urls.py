@@ -9,6 +9,5 @@ urlpatterns = [
     path("contactmail/",views.contactmail , name = "contactmail"),
     path("",views.login,name="login"),
     path("SignUp",views.Signup,name="SignUp"),
-    path("bhargav",views.bhargav,name="bhargav"),
 
 ]

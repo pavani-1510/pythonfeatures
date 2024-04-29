@@ -2,39 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Weather Forecast</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: yellow;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin-top: 0;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .weather-info {
+            text-align: center;
+        }
+        .error-message {
+            color: #ff0000;
+        }
+    </style>
 </head>
 {% block body %}
+<body>
 <div class="container">
-  <div class="row">
-    <div  align="center" class="col">
-        <br> <br>
-      <h1>Welcome to Weather Forecast</h1>
-    <form method ="post" action="">
-        {% csrf_token %}
-        <br>
-        <h4>
-            <label>Enter a City Name : </label>
-            <input type="text" name="place">
-            <br><br>
-            <button type="submit" class="btn btn-success btn-lg">Check the Current Weather</button>
-        </h4>
-    </form>
+    <div class="form-container">
+        <h1>Welcome to Weather Forecast</h1>
+        <form method="post" action="">
+            {% csrf_token %}
+            <label for="place">Enter a City Name:</label><br>
+            <input type="text" id="place" name="place"><br><br>
+            <button type="submit" class="btn">Check the Current Weather</button>
+        </form>
     </div>
-      <div  align="center" class="col">
-          <br> <br>
-        <h1>Weather Information</h1>
-          <br><br>
-          <h1>
-              {% if error_message %}
-              <p>{{ error_message }}</p>
-                 {% else %}
-                 <p>City: {{ city }}</p>
-                <p>Temperature: {{ temperature1 }} &#8451;</p>
-                <p>Humidity: {{ humidity }}%</p>
-                {% endif %}
-          </h1>
-      </div></div>
+    <div class="weather-info">
+        <h2>Weather Information</h2>
+        {% if error_message %}
+            <p class="error-message">{{ error_message }}</p>
+        {% else %}
+            <p>City: {{ city }}</p>
+            <p>Temperature: {{ temperature1 }} &#8451;</p>
+            <p>Humidity: {{ humidity }}%</p>
+        {% endif %}
+    </div>
 </div>
+</body>
 {% endblock %}
 </html>

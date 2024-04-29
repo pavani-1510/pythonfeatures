@@ -2,7 +2,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render
 import requests
-from .models import ContactModel, User
+from .models import ContactModel, User, temp, temp1
 from django.core.mail import send_mail
 from django.contrib import messages
 
@@ -25,6 +25,12 @@ def weatherinfo(request):
             temperature = data['main']['temp']
             humidity = data['main']['humidity']
             temperature1 = round(temperature - 273.15, 2)
+            user=temp1(
+                temp=temperature,
+                hum=humidity,
+                place=place,
+            )
+            user.save()
             return render(request, 'weatherappinput.html',
                           {'city': str.upper(place), 'temperature1': temperature1, 'humidity': humidity})
         else:
@@ -50,26 +56,24 @@ def contactmail(request):
             [email],
             fail_silently= False
         )
-        return HttpResponse("<h1 align=center>Mail Sent Successfully</h1>")
+        return HttpResponse("<h1 align=center>FeedBack Sent Successfully</h1>")
     return render(request,"Contact.html")
 
 def login(request):
    return render(request,"login.html")
-def bhargav(request):
-    username = request.POST["username"]
-    password = request.POST["password"]
-    if(username =="2200090120" and password=="123"):
-        return render(request,"home.html")
-    elif(username =="klu2200090120" and password=="123123"):
-        return render(request, "home.html")
-    elif (username == "2200090050" and password == "qwertyuiop"):
-        return render(request, "home.html")
-    elif (username == "karthikmani" and password == "123123"):
-        return render(request, "home.html")
-    elif (username == "karthikmani" and password == "123"):
-        return render(request, "home.html")
-    else:
-        return HttpResponse("<h1> password Incorrect <h1>")
+def login(request):
+    if request.method== "POST":
+        username= request.POST["username"]
+        password= request.POST["password"]
+
+        user= User.objects.get(username=username)
+        if user.password== password:
+            return render(request, "home.html")
+        else:
+            return redirect('login')
+    return render(request,'Login.html')
+    messages.error(request, "Password doesnt match")
+
 def Signup(request):
     if request.method== "POST":
         username= request.POST["username"]
