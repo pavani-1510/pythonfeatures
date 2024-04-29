@@ -4,51 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1b68603-0ffa-48cb-96fa-2de8ae8616cd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/myapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Navbar.html" afterDir="false" />
-    </list>
+    <list default="true" id="daa5498f-faf0-490d-959e-5d6ea8cc5de1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2dRvSqedHKF5WMkq2pSupL8IkCr" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2flhhdWK9vCqWOFun2CcTjrhX1X" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "F:/flaskwebapp"
+    "last_opened_file_path": "C:/Users/KARTHIK MANI/Desktop/pfsd/SDP-e38c49e314202293bd4d6833b318665872eb15c4/pythonfeatures"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\KARTHIK MANI\Desktop\pythonfeatures\pythonfeatures\static" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\KARTHIK MANI\Desktop\pythonfeatures\pythonfeatures\static\images" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -59,11 +35,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d1b68603-0ffa-48cb-96fa-2de8ae8616cd" name="Changes" comment="" />
-      <created>1709983707582</created>
+      <changelist id="daa5498f-faf0-490d-959e-5d6ea8cc5de1" name="Changes" comment="" />
+      <created>1714381691775</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1709983707582</updated>
+      <updated>1714381691775</updated>
     </task>
     <servers />
   </component>

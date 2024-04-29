@@ -2,7 +2,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render
 import requests
-from .models import ContactModel, User, temp, temp1
+from .models import ContactModel, User, temp1
 from django.core.mail import send_mail
 from django.contrib import messages
 
@@ -38,6 +38,7 @@ def weatherinfo(request):
             return render(request, 'weatherappinput.html', {'error_message': error_message})
     return render(request,"weatherappinput.html")
 
+
 def contactmail(request):
     if request.method == 'POST':
         firstname = request.POST['firstname']
@@ -56,7 +57,7 @@ def contactmail(request):
             [email],
             fail_silently= False
         )
-        return HttpResponse("<h1 align=center>FeedBack Sent Successfully</h1>")
+        return HttpResponse("<h1 align=center>Mail Sent Successfully</h1>")
     return render(request,"Contact.html")
 
 def login(request):
@@ -73,7 +74,13 @@ def login(request):
             return redirect('login')
     return render(request,'Login.html')
     messages.error(request, "Password doesnt match")
-
+def bhargav(request):
+    username = request.POST["username"]
+    password = request.POST["password"]
+    if(username =="2200090120" and password=="123"):
+        return render(request,"home.html")
+    else:
+        return HttpResponse("<h1> password Incorrect <h1>")
 def Signup(request):
     if request.method== "POST":
         username= request.POST["username"]
